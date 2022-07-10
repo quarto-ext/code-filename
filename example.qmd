@@ -1,0 +1,22 @@
+---
+title: Code Filename
+format:
+   html: 
+     theme: cosmo
+   pdf: default
+filters:
+   - code-filename
+---
+
+
+TODO:
+
+- Docs / README / Publish
+- Simplify Blocks
+- Non HTML treatment
+- Theming (bootstrap, light/dark)
+
+```{.python filename="foo.py"}
+1 + 1
+```
+
