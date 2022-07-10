@@ -1,0 +1,23 @@
+.code-with-filename .code-with-filename-file  {
+  margin-bottom: 0;
+  padding-left: 8px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  font-family: var(--quarto-font-monospace);
+  background-color: rgba(219, 219, 219, 0.8);
+  border: 1px solid rgba(233,236,239,.65);
+  border-radius: 0.25rem;
+  border-bottom: 0;
+  border-bottom-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
+.code-with-filename .code-with-filename-file strong {
+  font-weight: 400;
+}
+
+.code-with-filename div.sourceCode {
+  margin-top: 0;
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
