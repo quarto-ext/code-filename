@@ -3,7 +3,7 @@
 -- for code blocks w/ filename create an enclosing div:
 -- <div class="code-with-filename">
 --   <div class="code-with-filename-file">
---    filename.py
+--     <pre>filename.py</pre>
 --   </div>
 --   <div class="sourceCode" id="cb1" data-filename="filename.py">
 --     <pre></pre>
@@ -17,11 +17,12 @@ function Blocks(blocks)
   local newBlocks = pandoc.List()
   for _,block in ipairs(blocks) do
     if block.t == "CodeBlock" and block.attributes["filename"] then
-      local filenamePre = pandoc.Plain{
-        pandoc.RawInline("html", "<pre class=\"code-with-filename-file\">"),
+      local filenamePre = pandoc.Div({pandoc.Plain{
+        pandoc.RawInline("html", "<pre>"),
+        pandoc.Space(),
         pandoc.Strong{pandoc.Str(block.attributes["filename"])},
         pandoc.RawInline("html", "</pre>")
-      }
+      }}, pandoc.Attr("", {"code-with-filename-file"}))
       newBlocks:insert(
         pandoc.Div(
           { filenamePre, block },
