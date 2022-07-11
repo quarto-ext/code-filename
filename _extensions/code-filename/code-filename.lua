@@ -17,13 +17,14 @@ function Blocks(blocks)
   local newBlocks = pandoc.List()
   for _,block in ipairs(blocks) do
     if block.t == "CodeBlock" and block.attributes["filename"] then
-      local filenameDiv = pandoc.Div(
-        { pandoc.Plain{ pandoc.Strong{pandoc.Str(block.attributes["filename"])}} } ,
-        pandoc.Attr("", { "code-with-filename-file" })
-      )
+      local filenamePre = pandoc.Plain{
+        pandoc.RawInline("html", "<pre class=\"code-with-filename-file\">"),
+        pandoc.Strong{pandoc.Str(block.attributes["filename"])},
+        pandoc.RawInline("html", "</pre>")
+      }
       newBlocks:insert(
         pandoc.Div(
-          { filenameDiv, block },
+          { filenamePre, block },
           pandoc.Attr("", {"code-with-filename"})
         )
       )
