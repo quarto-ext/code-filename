@@ -16,7 +16,7 @@ Add this to your document or project options:
 
 ```yaml
 filters:
-   - code-filename
+  - code-filename
 ```
 
 ## Usage
