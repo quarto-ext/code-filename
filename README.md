@@ -10,6 +10,15 @@ To install this extension in your current directory (or into the Quarto project 
 quarto install extension quarto-ext/code-filename
 ```
 
+## Enabling
+
+Add this to your document or project options:
+
+```yaml
+filters:
+  - code-filename
+```
+
 ## Usage
 
 Add the `filename` attribute to any code block:
@@ -28,5 +37,5 @@ This results in the following HTML output:
 
 Non-HTML formats will still have the filename, but it will simply be shown in bold above the code block.
 
-You can see the published version of this example at <https://quarto-ext.github.io/code-filename/>.
+You can see the published version of this example at <https://quarto-ext.github.io/code-filename/> ([Source code](example.qmd)).
 
