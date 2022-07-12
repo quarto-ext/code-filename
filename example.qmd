@@ -1,8 +1,7 @@
 ---
 title: Code Filename
 format:
-   html: 
-     theme: cosmo
+   html: default
    pdf: default
 filters:
    - code-filename
