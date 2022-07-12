@@ -2,7 +2,6 @@
   margin-bottom: 0;
   padding-bottom: 2px;
   padding-top: 2px;
-  font-family: var(--quarto-font-monospace);
   border: var(--quarto-border-width) solid var(--quarto-border-color);
   border-radius: var(--quarto-border-radius);
   border-bottom: 0;
